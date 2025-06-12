@@ -1,2 +1,2 @@
-require("sinore.core")
-require("sinore.lazy")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
