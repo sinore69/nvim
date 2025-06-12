@@ -26,3 +26,8 @@ keymap.set("n", "e", "$", { desc = "Go to last non-blank character" })
 keymap.set("n", "j", "k", { desc = "Go Up" })
 keymap.set("n", "k", "j", { desc = "Go Down" })
 keymap.set("n", "r", "<C-r>", { desc = "Redo" })
+
+keymap.set("v", "j", "k", { desc = "Go Up" })
+keymap.set("v", "k", "j", { desc = "Go Down" })
+keymap.set("v", "s", "^", { desc = "Go to first non-blank character" })
+keymap.set("v", "e", "$", { desc = "Go to last non-blank character" })
