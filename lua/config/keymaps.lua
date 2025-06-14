@@ -45,22 +45,16 @@ vim.keymap.set("t", "<leader>tc", function()
   vim.cmd("bdelete!")
 end, { desc = "Delete terminal buffer (terminal mode)" })
 
-vim.keymap.set("t", "<leader>tv", function()
+vim.keymap.set("t", "<leader>tr", function()
   local cwd = vim.fn.getcwd()
-
-  -- Exit terminal mode temporarily to create the split
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-\\><C-n>", true, false, true), "n", false)
-
-  -- Create vertical split and start terminal
   vim.cmd("vsplit")
   vim.cmd("terminal fish")
   vim.cmd("startinsert")
-
-  -- Change to current working directory in the new terminal
   vim.fn.chansend(vim.b.terminal_job_id, "cd " .. cwd .. "\n")
 end, { desc = "Split terminal vertically (Fish)" })
 
-vim.keymap.set("t", "<leader>th", function()
+vim.keymap.set("t", "<leader>tb", function()
   local cwd = vim.fn.getcwd()
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-\\><C-n>", true, false, true), "n", false)
   vim.cmd("split")
