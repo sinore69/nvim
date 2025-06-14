@@ -16,8 +16,6 @@ keymap.set("v", "s", "^", { desc = "Go to first non-blank character" })
 keymap.set("v", "e", "$", { desc = "Go to last non-blank character" })
 keymap.set('n', '<C-r>', ':vsplit<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-b>', ':split<CR>', { noremap = true, silent = true })
-keymap.set('n', '[[', 'gg', { noremap = true, silent = true })
-keymap.set('n', ']]', 'G', { noremap = true, silent = true })
 keymap.set('n', '<C-q>', ':q<CR>', { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>tt", function()
