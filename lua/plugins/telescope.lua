@@ -11,9 +11,9 @@ return {
         "--line-number",
         "--column",
         "--smart-case",
-        "--hidden",      -- show hidden files
-        "--no-ignore",   -- don't respect .gitignore
-        "--glob=!.git/", -- EXCLUDE .git folder
+        "--hidden",
+        "--no-ignore",
+        "--glob=!.git/",
       },
     })
 
