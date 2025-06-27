@@ -8,13 +8,13 @@ return {
         current = "cwd",
       },
       filtered_items = {
-        visible = true,             -- Show the filtered items
+        visible = true,
         force_visible_in_empty_folder = true,
-        hide_dotfiles = false,      -- Don't hide dotfiles
-        hide_gitignored = false,    -- Don't hide gitignored files
-        hide_by_name = {},          -- Don't hide by name
-        never_show = {},            -- Don't exclude anything ever
-        never_show_by_pattern = {}, -- Don't exclude by pattern
+        hide_dotfiles = false,
+        hide_gitignored = false,
+        hide_by_name = {},
+        never_show = {},
+        never_show_by_pattern = {},
       },
       follow_current_file = {
         enabled = true,
