@@ -28,6 +28,21 @@ vim.keymap.set("n", "<leader>e", function()
   vim.cmd("Neotree toggle reveal_force_cwd")
 end, { desc = "Neo-tree (default source)" })
 
+-- Custom Telescope find_files that shows hidden and gitignored files
+local function find_all_files()
+  require("telescope.builtin").find_files({
+    hidden = true,
+    no_ignore = true,
+    follow = true,
+  })
+end
+
+-- Bind <leader><leader> to custom find_files
+vim.keymap.set("n", "<leader><leader>", find_all_files, { desc = "Find Files (all)" })
+
+-- Bind <leader>ff to custom find_files
+vim.keymap.set("n", "<leader>ff", find_all_files, { desc = "Find Files (all)" })
+
 vim.keymap.set("n", "<leader>tt", function()
   local cwd = vim.fn.getcwd()
   vim.cmd("split")
