@@ -18,6 +18,16 @@ keymap.set('n', '<C-r>', ':vsplit<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-b>', ':split<CR>', { noremap = true, silent = true })
 keymap.set('n', '<C-q>', ':q<CR>', { noremap = true, silent = true })
 
+-- Toggle Neo-tree in filesystem mode
+vim.keymap.set("n", "<leader>fe", function()
+  vim.cmd("Neotree toggle filesystem reveal_force_cwd")
+end, { desc = "Neo-tree (filesystem)" })
+
+-- Toggle Neo-tree using the default source (same as <leader>e by default)
+vim.keymap.set("n", "<leader>e", function()
+  vim.cmd("Neotree toggle reveal_force_cwd")
+end, { desc = "Neo-tree (default source)" })
+
 vim.keymap.set("n", "<leader>tt", function()
   local cwd = vim.fn.getcwd()
   vim.cmd("split")
